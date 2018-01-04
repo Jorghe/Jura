@@ -1,6 +1,14 @@
 {
-  "name": "Jura",
+  "name": "devJura",
   "app_id": "483611c3",
-  "type": "ionic-angular",
-  "integrations": {}
+  "type": "ionic1",
+  "integrations": {
+    "gulp": {}
+  },
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
 }
