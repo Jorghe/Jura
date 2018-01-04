@@ -21,14 +21,13 @@ function($scope, $state) {
 console.log($scope.articulos);
 });
 
-$scope.verWorkflow = function(){
-  $state.go('comoactuar');
-};
-
-$scope.verReglamento = function(){
-  console.log('Ver Reglamento');
-  $state.go('detalleReglamento');
-};
+// Cambios de estado:
+$scope.goHome = function(){ $state.go('tab.home'); };  
+$scope.verWorkflow = function(){ $state.go('comoactuar'); }; // Main
+$scope.verReglamento = function(){ $state.go('detalleReglamento'); };
+$scope.reglamentoxTemas = function() { console.log('go to reglamento por temas'); };
+$scope.forosdeReglamento = function(){ console.log('go to foros de Reglamento'); };
+$scope.tipsdeReglamento = function(){ console.log('go to tips de reglamento'); };
 
   console.log('Te encuentras en Reglamento;');
 }]);
