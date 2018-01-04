@@ -1,0 +1,36 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <h2>Bienvenido a Jura</h2>
+    <p>
+      Una App para todos...
+      <a href="http://view.ionic.io/">Ver más</a>.
+    </p>
+    <input type="text" name="search" placeholder="¿Qué estas buscando?">
+    <div class="panel-box">
+      <i class="ion-paper-airplane"></i>
+      <div class="panel-head">Noticias</div>
+      <div class="panel-content">{{news}}</div>
+      <div class="panel-footer" ng-click="goToNews()"><i class="ion-arrow-down-b"></i></div>
+    </div>
+    <div class="panel-box">
+      <i class="ion-filing"></i>
+      <div class="panel-head">Reglamento</div>
+      <div class="panel-content">{{reglamento}}</div>
+      <div class="panel-footer" ng-click="goToReglamento()"><i class="ion-arrow-down-b"></i></div>
+
+    </div>
+    <div class="panel-box">
+      <i class="ion-ios-lightbulb-outline"></i>
+      <div class="panel-head">Tips</div>
+      <div class="panel-content">{{tips}}</div>
+    </div>
+    <div class="panel-box">
+      <i class="ion-ios-more"></i>
+      <div class="panel-head">Acerca de...</div>
+      <div class="panel-content">{{about}}</div>
+      <div class="panel-footer"></div>
+    </div>
+
+
+  </ion-content>
+</ion-view>

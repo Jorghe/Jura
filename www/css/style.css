@@ -1,0 +1,152 @@
+/* Empty. Add your own CSS if you like */
+input[type=text] {
+  margin:auto;
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
+
+div.panel-box{
+  position:relative;
+  display: block;
+  height: 150px;
+  width: 80%;
+  background-color: #387ef5a3;
+  padding: 10px;
+  border-color: #bbbbaa;
+  margin:auto;
+  margin-bottom: 10px;
+}
+.panel-box > i {
+
+    display: block;
+    float: left;
+    margin: 0 15px 10px 0;
+    width: 70px;
+    height: 70px;
+    line-height: 75px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 40px;
+}
+div.panel-head{
+  padding:10px;
+  text-align: left;
+  font-weight: bold;
+  font-size:150%;
+}
+div.panel-footer{
+  position:absolute;
+
+  width:90%;
+  bottom:0;
+}
+.panel-footer > i {
+  float:right;
+  display: block;
+  font-size: 20px;
+
+}
+
+.navigation {
+  display:block;
+}
+.navigation > i {
+  display:inline-block;
+}
+.nav-current {
+  display:inline-block;
+}
+
+.panel-main {
+  position:relative;
+  margin:auto;
+  width:80%;
+  display:block;
+  height:80px;
+  overflow: hidden;
+  margin-bottom:20px;
+}
+.panel-main > i {
+  display: block;
+  float: left;
+  margin: 0 15px 10px 0;
+  width: 70px;
+  height: 70px;
+  line-height: 75px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 40px;
+}
+.panel-wrapper {
+  margin:auto;
+  position:relative;
+  width:90%;
+}
+.panel-wrapper > * {
+  width:100%;
+  display:inline-block;
+  margin-top:10px;
+
+}
+.panel-secondary:nth-child(odd){
+  background-color: #79e1ff;
+
+}
+.panel-secondary:nth-child(even){
+  background-color: #c2ffd3;
+
+}
+.panel-secondary {
+  /* position:relative;
+  margin:auto;
+  width:40%;
+
+  height:120px; */
+  padding:2px;
+  text-align:center;
+}
+.panel-secondary > i {
+  display:block;
+  margin:10px;
+  font-size:x-large;
+  text-align: center;
+}
+
+.articulos-wrapper {
+  position:relative;
+  padding-top: 1px;
+padding-bottom: 1px;
+padding-left: 0;
+margin-bottom: 20px;
+}
+.articulo {
+  background-color: #ccc;
+  padding-left:60px;
+  min-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-color: #ddd;
+  display:block;
+  margin-top:10px;
+}
+.articulo > p {
+  overflow:hidden;
+  text-overflow: ellipsis;
+  margin-left: 0;
+  color: #666;
+}
+
+.articuloDet {
+  background-color: #ccc;
+  padding-left:60px;
+  border-color: #ddd;
+  display:block;
+  margin-top:10px;
+}

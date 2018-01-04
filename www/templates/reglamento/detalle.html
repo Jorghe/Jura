@@ -1,0 +1,24 @@
+<ion-view view-title="Detalle">
+  <ion-content class="padding">
+    <h2>Detalles</h2>
+    <div class="navigation" href="#">
+      <i class="ion-home"></i>
+      <div class="nav-current">Reglamento</div>
+    </div>
+    <input type="text" name="search" placeholder="¿Qué estas buscando?">
+    <div class="articulos-wrapper">
+      <div class="articulo" ng-repeat="articulo in articulos" id="articulo-{{articulo.n}}"
+      ng-class="{articulo : showDetalle[$index], articuloDet : !showDetalle[$index] }" ng-click="showDetalle[$index] = !showDetalle[$index]">
+        Articulo {{articulo.n}}
+        <p> {{articulo.raw}} </p>
+      </div>
+      <!-- <div class="articuloDet" ng-class="{articulo : showDetalle[1], articuloDet : !showDetalle[1] }" ng-click="show(); showDetalle[1] = !showDetalle[1]">
+        {{articulos[1].n}} . Articulo 2
+        <p> {{articulos[1].raw}} </p>
+      </div> -->
+    </div>
+
+
+
+  </ion-content>
+</ion-view>
