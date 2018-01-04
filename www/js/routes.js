@@ -22,6 +22,11 @@ angular.module('jura.routes', [])
     templateUrl: 'templates/reglamento/detalle.html',
     controller: 'ReglamentoCtrl'
   })
+  .state('comoactuar', {
+    url: '/reglamento/comoactuar',
+    templateUrl: 'templates/reglamento/comoactuar.html',
+    controller: 'ReglamentoCtrl'
+  });
 
   $urlRouterProvider.otherwise('/tab/dashboard');
 
