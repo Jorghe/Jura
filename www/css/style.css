@@ -55,6 +55,7 @@ div.panel-footer{
 
 .navigation {
   display:block;
+  font-size:2em;
 }
 .navigation > i {
   display:inline-block;
@@ -64,6 +65,8 @@ div.panel-footer{
 }
 
 .panel-main {
+  background: linear-gradient(#45c0fd, #225a76);
+  border-radius: 6px;
   position:relative;
   margin:auto;
   width:80%;
@@ -71,6 +74,8 @@ div.panel-footer{
   height:80px;
   overflow: hidden;
   margin-bottom:20px;
+  color: #FFFFFF;
+  font-weight: bold;
 }
 .panel-main > i {
   display: block;
@@ -82,6 +87,9 @@ div.panel-footer{
   vertical-align: middle;
   text-align: center;
   font-size: 40px;
+}
+.panel-description {
+  font-weight: normal;
 }
 .panel-wrapper {
   margin:auto;
@@ -108,6 +116,7 @@ div.panel-footer{
   width:40%;
 
   height:120px; */
+  border-radius: 6px;
   padding:2px;
   text-align:center;
 }
@@ -127,7 +136,7 @@ margin-bottom: 20px;
 }
 .articulo {
   background-color: #ccc;
-  padding-left:60px;
+  padding-left:20px;
   min-height: 60px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -145,8 +154,12 @@ margin-bottom: 20px;
 
 .articuloDet {
   background-color: #ccc;
-  padding-left:60px;
+  padding-left:20px;
   border-color: #ddd;
   display:block;
   margin-top:10px;
+}
+.articuloDet > p {
+  padding:15px;
+  text-align:justify;
 }
