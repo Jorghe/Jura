@@ -25,7 +25,7 @@ angular.module('jura.routes', [])
   .state('comoactuar', {
     url: '/reglamento/comoactuar',
     templateUrl: 'templates/reglamento/comoactuar.html',
-    controller: 'ReglamentoCtrl'
+    controller: 'WorkflowCtrl'
   })
   // From default:
   // setup an abstract state for the tabs directive
@@ -78,7 +78,7 @@ angular.module('jura.routes', [])
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
-  
+
 
   //$urlRouterProvider.otherwise('/tab/dashboard');
 

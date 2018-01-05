@@ -22,7 +22,7 @@ console.log($scope.articulos);
 });
 
 // Cambios de estado:
-$scope.goHome = function(){ $state.go('tab.home'); };  
+$scope.goHome = function(){ $state.go('tab.dash'); };  
 $scope.verWorkflow = function(){ $state.go('comoactuar'); }; // Main
 $scope.verReglamento = function(){ $state.go('detalleReglamento'); };
 $scope.reglamentoxTemas = function() { console.log('go to reglamento por temas'); };

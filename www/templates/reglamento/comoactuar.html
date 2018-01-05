@@ -1,7 +1,15 @@
 <ion-view view-title="Como actuar">
   <ion-content class="padding">
     <h2>Workflow</h2>
-    Hola mundo...
 
+    {{test}} {{workflow.length}}
+    <ul class="workflow">
+      <li class="workflow-item" ng-repeat="flow in workflow" ng-click="data.detalle[$index] = !data.detalle[$index]">
+
+        <!-- <input id="wf1" class="hide" type="radio" ng-checked="data.detalle[$index]"> -->
+        <div id="wf1" class="workflow-head">{{flow.titulo}}</label>
+        <p class="workflow-content" ng-show="data.detalle[$index]">{{flow.raw}}</p>
+      </li>
+    </ul>
   </ion-content>
 </ion-view>
