@@ -17,3 +17,17 @@
   color: black;
   font-size: 15px;
 }
+div.workflow-footer{
+  position:absolute;
+  width:90%;
+  bottom:0;
+}
+.workflow-footer > i {
+  color: black;
+  float:right;
+  display: block;
+  font-size: 20px;
+}
+.workflow-button {
+  color: #ccc;
+}

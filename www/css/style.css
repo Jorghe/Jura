@@ -53,17 +53,6 @@ div.panel-footer{
 
 }
 
-.navigation {
-  display:block;
-  font-size:2em;
-}
-.navigation > i {
-  display:inline-block;
-}
-.nav-current {
-  display:inline-block;
-}
-
 .panel-main {
   background: linear-gradient(#45c0fd, #225a76);
   border-radius: 6px;

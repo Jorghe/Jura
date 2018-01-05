@@ -1,0 +1,25 @@
+.navigation {
+  display:block;
+  font-size:2em;
+}
+.navigation > i {
+  display:inline-block;
+}
+.navigation > div:last-child {
+   /* color: red; */
+ }
+ .navigation >div:first-of-type{
+   /* color:green; */
+ }
+ .nav-item {
+   display:inline-block;
+   /* visibility: hidden; */
+ }
+.nav-item::first-letter{
+  /* visibility: visible; */
+}
+
+/* Hover the first letter to see the rest */
+.nav-item:hover {
+  color:cyan;
+}
