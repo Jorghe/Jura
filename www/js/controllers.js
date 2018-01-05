@@ -1,15 +1,5 @@
 angular.module('jura.controllers', [])
 
-.controller('DashCtrl', function($scope, $state) {
-  $scope.news = 'Las noticias son...';
-  $scope.reglamento = 'El reglamento es';
-  $scope.tips = 'Encuentra tips aquí';
-  $scope.about = 'Acerca de esta app';
-
-  $scope.goToNews = function(){ $state.go('news'); }
-  $scope.goToReglamento = function(){ $state.go('reglamento'); }
-})
-
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.

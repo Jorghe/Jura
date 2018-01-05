@@ -3,8 +3,7 @@ angular.module('jura.controllers')
 function($scope, $state, $firebaseArray) {
   console.log('Te encuentras en workflow;');
   $scope.test = 'Hola mundo';
-  $scope.data = {
-  };
+  $scope.data = {};
 
 
   $scope.workflow = $firebaseArray(firebase.database().ref().child("workflow/"));
@@ -16,6 +15,9 @@ function($scope, $state, $firebaseArray) {
     }
     console.log('data from detalle', $scope.data);
   });
+  $scope.gotoflow = function(id){
+    console.log(id, $scope.workflow[id].$id, $scope.workflow[id]);
+  }
   // $scope.workflow.detalle = 'aaa';
   firebase.database().ref('/workflow/').once('value').then(function(snapshot) {
   //var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';

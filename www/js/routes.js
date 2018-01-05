@@ -42,7 +42,7 @@ angular.module('jura.routes', [])
     views: {
       'tab-dash': {
         templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+        controller: 'HomeCtrl'
       }
     }
   })
