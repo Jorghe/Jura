@@ -9,7 +9,7 @@
       <div class="articulo" ng-repeat="articulo in articulos" id="articulo-{{articulo.n}}"
       ng-class="{articulo : showDetalle[$index], articuloDet : !showDetalle[$index] }" ng-click="showDetalle[$index] = !showDetalle[$index]">
         Articulo {{articulo.n}}
-        <p> {{articulo.raw}} </p>
+        <p> {{articulo.raw.raw}} </p>
       </div>
       <!-- <div class="articuloDet" ng-class="{articulo : showDetalle[1], articuloDet : !showDetalle[1] }" ng-click="show(); showDetalle[1] = !showDetalle[1]">
         {{articulos[1].n}} . Articulo 2

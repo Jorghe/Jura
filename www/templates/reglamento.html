@@ -2,10 +2,10 @@
   <ion-content class="padding">
 
     <div class="navigation">
-      <i class="ion-home" ng-click="goHome()"></i>
-      <div class="nav-item nav-current">Reglamento</div>
+      <i class="ion-home nav-item" ng-click="goHome()"></i>
+      <p class="nav-item-current nav-item" ng-click="data.show = !data.show" ng-class="{'nav-item-expanded': data.show}">Noticias</p>
     </div>
-
+    {{data.show}}
     <input type="text" name="search" placeholder="¿Qué estas buscando?">
     <div class="panel-main"  ng-click="verWorkflow()">
       <i class="ion-arrow-swap"></i>

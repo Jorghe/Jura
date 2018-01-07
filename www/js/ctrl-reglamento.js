@@ -1,6 +1,12 @@
 angular.module('jura.controllers')
-.controller('ReglamentoCtrl',['$scope', '$state',
-function($scope, $state) {
+.controller('ReglamentoCtrl',['$scope', '$state', '$timeout',
+function($scope, $state, $timeout) {
+  $scope.trigger = function(item){
+    $scope.data.show = true;
+    $timeout(function(){ $scope.data.show = false; }, 1500);
+  };
+  $scope.data= {show:false};
+  $scope.count = 0;
   $scope.articulos = new Array(5);
   $scope.showDetalle = new Array(5);
   var art = 1;
@@ -22,7 +28,7 @@ console.log($scope.articulos);
 });
 
 // Cambios de estado:
-$scope.goHome = function(){ $state.go('tab.dash'); };  
+$scope.goHome = function(){ $state.go('tab.dash'); };
 $scope.verWorkflow = function(){ $state.go('comoactuar'); }; // Main
 $scope.verReglamento = function(){ $state.go('detalleReglamento'); };
 $scope.reglamentoxTemas = function() { console.log('go to reglamento por temas'); };

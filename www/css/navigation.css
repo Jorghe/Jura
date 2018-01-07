@@ -1,9 +1,20 @@
 .navigation {
+  height: 40px;
+  width: 80%;
   display:block;
-  font-size:2em;
+  position:relative;
+  font-size:20px;
+  background-color: darkgrey;
+  border-radius: 6px;
+  //text-align: center;
+
+}
+.navigation:hover{
+  background-color: green;
 }
 .navigation > i {
-  display:inline-block;
+  max-width: 30px;
+  max-height: 30px;
 }
 .navigation > div:last-child {
    /* color: red; */
@@ -12,14 +23,49 @@
    /* color:green; */
  }
  .nav-item {
+   float:left;
+   position:relative;
+   margin: auto;
+   background: linear-gradient(to right, #ffffff6e, #ffffffff);
+   border-radius: 3px;
+   padding:5px;
+   height:30px;
+   width:30px;
    display:inline-block;
+   white-space: nowrap;
+   overflow: hidden;
+   transition: all linear 1000s;
+   /* background-color: #ddd; */
+
+   }
+   .nav-item-current{
+      min-width: 90px;
+      position:absolute;
    /* visibility: hidden; */
  }
+ .nav-item-expanded{
+   animation-name: expand;
+   animation-duration: 500ms;
+   animation-direction:alternate;
+   animation-timing-function: cubic-bezier(.12,.61,.34,1);
+   //animation-iteration-count: 2;
+   animation-fill-mode: forwards;
+ }
+
 .nav-item::first-letter{
   /* visibility: visible; */
 }
 
 /* Hover the first letter to see the rest */
 .nav-item:hover {
-  color:cyan;
+  //color:cyan;
+}
+@keyframes expand {
+  0%{
+    width:90px;
+  }
+  100%{
+    width:150px;
+    height: 35px;
+  }
 }

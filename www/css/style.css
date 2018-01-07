@@ -1,4 +1,13 @@
 /* Empty. Add your own CSS if you like */
+.loading{
+  position:absolute;
+  height:300px;
+  background-color:#ffffff94;
+  width:100%;
+  z-index: 10;
+
+}
+
 input[type=text] {
   margin:auto;
     width: 130px;
