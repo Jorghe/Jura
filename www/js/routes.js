@@ -27,6 +27,11 @@ angular.module('jura.routes', [])
     templateUrl: 'templates/reglamento/comoactuar.html',
     controller: 'WorkflowCtrl'
   })
+  .state('therightpath', {
+    url: '/therightpath',
+    templateUrl: 'templates/therightpath.html',
+    controller: 'RightpathCtrl'
+  })
   // From default:
   // setup an abstract state for the tabs directive
     .state('tab', {

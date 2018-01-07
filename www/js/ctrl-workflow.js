@@ -1,6 +1,6 @@
 angular.module('jura.controllers')
-.controller('WorkflowCtrl',['$scope', '$state', '$firebaseArray',
-function($scope, $state, $firebaseArray) {
+.controller('WorkflowCtrl',['$scope', '$state', '$rootScope', '$firebaseArray',
+function($scope, $state, $rootScope, $firebaseArray) {
   console.log('Te encuentras en workflow;');
   $scope.test = 'Hola mundo';
   $scope.data = {};
@@ -17,7 +17,10 @@ function($scope, $state, $firebaseArray) {
   });
   $scope.gotoflow = function(id){
     console.log(id, $scope.workflow[id].$id, $scope.workflow[id]);
-  }
+    $rootScope.flowseleccionado = $scope.workflow[id];
+    console.log('flow seleccionado: ', $rootScope.flowseleccionado);
+    $state.go('therightpath');
+  };
   // $scope.workflow.detalle = 'aaa';
   firebase.database().ref('/workflow/').once('value').then(function(snapshot) {
   //var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';

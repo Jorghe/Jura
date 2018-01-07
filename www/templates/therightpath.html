@@ -1,0 +1,29 @@
+<ion-view view-title="Dashboard">
+  <ion-content>
+    <div class="loading" ng-if="!databaseResolved"></div>
+
+    <div class="pregunta">
+      <div class="topmenu">
+        <i class="ion-close-round close"></i>
+        <i class="ion-help help"></i>
+      </div>
+      <div class="pregHeader">{{preguntas[rutaseleccionada.current].titulo}}</div>
+      <div class="pregdescripcion" ng-if="showDetail">{{preguntas[rutaseleccionada.current].descripcion}} </div>
+      <div class="resContainer">
+        <div class="respuestaButton" ng-click="">Si</div>
+        <div class="respuestaButton">No</div>
+        <div class="respuestaButton">No sé</div>
+      </div>
+      <div class="respuestaButton" ng-click="showDetail = !showDetail">...</button>
+      </div>
+    </div>
+    <div class="complemento">
+      <ul>
+        <li ng-repeat="complemento in complementos">{{complemento.tag}}</li>
+      </ul>
+      {{rutaseleccionada.complementos}}
+    </div>
+
+
+  </ion-content>
+</ion-view>
