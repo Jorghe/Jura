@@ -19,5 +19,7 @@ angular.module('jura.controllers')
 
   $scope.goToNews = function(){ $state.go('news'); };
   $scope.goToReglamento = function(){ $state.go('reglamento'); };
+  $scope.goToTips = function(){ $state.go('tips'); };
+  $scope.goToAbout = function(){ $state.go('about'); };
 
   }]);

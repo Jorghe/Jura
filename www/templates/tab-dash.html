@@ -23,15 +23,15 @@
       <div class="panel-footer" ><i class="ion-arrow-down-b"></i></div>
     </div>
 
-    <div class="panel-box">
-      <i class="ion-ios-lightbulb-outline" ng-click="goToTips()"></i>
+    <div class="panel-box" ng-click="goToTips()">
+      <i class="ion-ios-lightbulb-outline" ></i>
       <div class="help-button" ng-show="data.help"><i class="ion-help"></i></div>
       <div class="panel-head">Tips</div>
       <div class="panel-content">{{tips}}</div>
     </div>
 
-    <div class="panel-box">
-      <i class="ion-ios-more" ng-click="goToAbout()"></i>
+    <div class="panel-box" ng-click="goToAbout()">
+      <i class="ion-ios-more" ></i>
       <div class="help-button" ng-show="data.help"><i class="ion-help"></i></div>
       <div class="panel-head">Acerca de...</div>
       <div class="panel-content">{{about}}</div>

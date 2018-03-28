@@ -2,14 +2,15 @@
   <ion-content class="padding">
     <h2>Workflow</h2>
 
-    {{test}} {{workflow.length}}
     <ul class="workflow">
       <li class="workflow-item" ng-repeat="flow in workflow">
 
         <!-- <input id="wf1" class="hide" type="radio" ng-checked="data.detalle[$index]"> -->
-        <div id="wf1" class="workflow-head" ng-click="data.detalle[$index] = !data.detalle[$index]; gotoflow($index)">{{flow.titulo}}</div>
+        <div style="display:inline-block;float:right; font-weight:bold; color:black;" ng-show="data.detalle[$index]" ng-click="gotoflow($index); $event.stopPropagation()">Ver detalle</div>
+        <div id="wf-{{$index}}" class="workflow-head" ng-click="data.detalle[$index] = !data.detalle[$index];">{{flow.titulo}}</div>
         <p class="workflow-content" ng-show="data.detalle[$index]">{{flow.raw}}
         </p>
+
         <!-- <button class="workflow-button"> Hola mundo </button> -->
         <!-- <div class="workflow-footer" ng-show="data.detalle[$index]" ng-click="gotoarticulo($index)"><i class="ion-arrow-down-b"></i></div> -->
 

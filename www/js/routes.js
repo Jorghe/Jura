@@ -32,6 +32,16 @@ angular.module('jura.routes', [])
     templateUrl: 'templates/therightpath.html',
     controller: 'RightpathCtrl'
   })
+  .state('tips', {
+    url: '/tips',
+    templateUrl: 'templates/tips.html',
+    controller: 'TipsCtrl'
+  })
+  .state('about', {
+    url: '/about',
+    templateUrl: 'templates/about.html',
+    controller: 'AboutCtrl'
+  })
   // From default:
   // setup an abstract state for the tabs directive
     .state('tab', {
