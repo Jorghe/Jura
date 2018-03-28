@@ -1,20 +1,23 @@
-<ion-view view-title="Dashboard">
+<ion-view view-title="Cómo actuar">
   <ion-content>
     <div class="loading" ng-if="!databaseResolved"></div>
 
     <div class="pregunta">
+
       <div class="topmenu">
         <i class="ion-close-round close"></i>
-        <i class="ion-help help"></i>
+        <div class="help-button"><i class="ion-help help" ng-click="showHelp(); $event.stopPropagation()"></i></div>
       </div>
+
       <div class="pregHeader">{{preguntas[rutaseleccionada.current].titulo}}</div>
       <div class="pregdescripcion" ng-if="showDetail">{{preguntas[rutaseleccionada.current].descripcion}} </div>
       <div class="resContainer">
-        <div class="respuestaButton" ng-click="">Si</div>
-        <div class="respuestaButton">No</div>
-        <div class="respuestaButton">No sé</div>
+        <div class="respuestaButton" ng-if="rutaseleccionada.si" ng-click="respuestaSi()">Si</div>
+        <div class="respuestaButton" ng-if="rutaseleccionada.no" ng-click="respuestaNo()">No</div>
+        <div class="respuestaButton" ng-if="rutaseleccionada.nose" ng-click="respuestaNoSe()">No sé</div>
       </div>
-      <div class="respuestaButton" ng-click="showDetail = !showDetail">...</button>
+      <div class="respuestaButton floatRight" ng-click="showDetail = !showDetail">...</div>
+
       </div>
     </div>
     <div class="complemento">

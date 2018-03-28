@@ -1,30 +1,38 @@
 <ion-view view-title="Dashboard">
   <ion-content class="padding">
     <h2>Bienvenido a Jura</h2>
+    <a class="button help-button button-icon icon ion-help" ng-click="data.help = !data.help"></a>
+
     <p>
       {{appdata.slogan}}
     </p>
+
     <input type="text" name="search" placeholder="¿Qué estas buscando?">
-    <div class="panel-box">
+    <div class="panel-box" ng-click="goToNews()">
       <i class="ion-paper-airplane"></i>
+      <div class="help-button" ng-show="data.help"><i class="ion-help"></i></div>
       <div class="panel-head">Noticias</div>
       <div class="panel-content">{{news}}</div>
-      <div class="panel-footer" ng-click="goToNews()"><i class="ion-arrow-down-b"></i></div>
+      <div class="panel-footer" ><i class="ion-arrow-down-b"></i></div>
     </div>
-    <div class="panel-box">
+    <div class="panel-box" ng-click="goToReglamento()">
       <i class="ion-filing"></i>
+      <div class="help-button" ng-show="data.help"><i class="ion-help"></i></div>
       <div class="panel-head">Reglamento</div>
       <div class="panel-content">{{reglamento}}</div>
-      <div class="panel-footer" ng-click="goToReglamento()"><i class="ion-arrow-down-b"></i></div>
-
+      <div class="panel-footer" ><i class="ion-arrow-down-b"></i></div>
     </div>
+
     <div class="panel-box">
-      <i class="ion-ios-lightbulb-outline"></i>
+      <i class="ion-ios-lightbulb-outline" ng-click="goToTips()"></i>
+      <div class="help-button" ng-show="data.help"><i class="ion-help"></i></div>
       <div class="panel-head">Tips</div>
       <div class="panel-content">{{tips}}</div>
     </div>
+
     <div class="panel-box">
-      <i class="ion-ios-more"></i>
+      <i class="ion-ios-more" ng-click="goToAbout()"></i>
+      <div class="help-button" ng-show="data.help"><i class="ion-help"></i></div>
       <div class="panel-head">Acerca de...</div>
       <div class="panel-content">{{about}}</div>
       <div class="panel-footer"></div>

@@ -10,6 +10,7 @@ angular.module('jura.controllers')
    }
 
 
+   $scope.data = {help:false};
   $scope.appdata = $rootScope.appdata;
   $scope.news = 'Las noticias son...';
   $scope.reglamento = 'El reglamento es';

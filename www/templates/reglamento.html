@@ -3,19 +3,23 @@
 
     <div class="navigation">
       <i class="ion-home nav-item" ng-click="goHome()"></i>
-      <p class="nav-item-current nav-item" ng-click="data.show = !data.show" ng-class="{'nav-item-expanded': data.show}">Noticias</p>
+      <png-click="data.show = !data.show" style="display:inline-block;margin:auto;">Reglamento</p>
     </div>
-    {{data.show}}
+    <a class="button help-button button-icon icon ion-help" ng-click="data.help = !data.help"></a>
+
+      <!-- {{data.show}} -->
     <input type="text" name="search" placeholder="¿Qué estas buscando?">
     <div class="panel-main"  ng-click="verWorkflow()">
+      <div class="help-button" ng-show="data.help" ng-click="help(0);$event.stopPropagation()"><i class="ion-help"></i></div>
       <i class="ion-arrow-swap"></i>
       Cómo actuar
       <p class="panel-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus purus et magna vulputate, cursus auctor dolor egestas. Praesent eleifend tincidunt est commodo venenatis. Morbi nec enim ac sem fermentum efficitur eu at nisi. Sed id congue risus. Pellentesque quis dolor vel tortor malesuada dapibus. Morbi ultrices viverra augue id elementum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
     </div>
     <div class="panel-wrapper">
       <div class="panel-secondary" ng-click="verReglamento()" >
+        <div class="help-button" ng-show="data.help" ng-click="help(1);$event.stopPropagation()"><i class="ion-help"></i></div>
         <i class="ion-paper-airplane"></i>
         Reglamento
         <p class="panel-description">
@@ -23,11 +27,15 @@
         </p>
       </div>
       <div class="panel-secondary">
+        <div class="help-button" ng-show="data.help" ng-click="help(2);$event.stopPropagation()"><i class="ion-help"></i></div>
+
         <i class="ion-grid"></i>
         Ver reglamento por temas
 
       </div>
       <div class="panel-secondary">
+        <div class="help-button" ng-show="data.help" ng-click="help(3);$event.stopPropagation()"><i class="ion-help"></i></div>
+
         <i class="ion-android-textsms"></i>
         Foros de discusión
         <p class="panel-description">
@@ -35,6 +43,8 @@
         </p>
       </div>
       <div class="panel-secondary">
+        <div class="help-button" ng-show="data.help" ng-click="help(4);$event.stopPropagation()"><i class="ion-help"></i></div>
+
         <i class="ion-arrow-swap"></i>
         Ver tips de Reglamento
 

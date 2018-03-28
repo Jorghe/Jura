@@ -30,6 +30,8 @@ div.panel-box{
   border-color: #bbbbaa;
   margin:auto;
   margin-bottom: 10px;
+  border:2.5px solid #387ef5;
+
 }
 .panel-box > i {
 
@@ -55,11 +57,19 @@ div.panel-footer{
   width:90%;
   bottom:0;
 }
-.panel-footer > i {
+.panel-footer.i {
   float:right;
   display: block;
   font-size: 20px;
 
+}
+.help-button {
+  float:right;
+  border-radius: 8px;
+  background-color: #ddd;
+  padding:5px;
+  border:1px solid black;
+  color:black;
 }
 
 .panel-main {

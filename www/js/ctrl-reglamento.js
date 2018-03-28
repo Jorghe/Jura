@@ -1,11 +1,11 @@
 angular.module('jura.controllers')
-.controller('ReglamentoCtrl',['$scope', '$state', '$timeout',
-function($scope, $state, $timeout) {
+.controller('ReglamentoCtrl',['$scope', '$state', '$timeout', '$ionicPopover',
+function($scope, $state, $timeout, $ionicPopover) {
   $scope.trigger = function(item){
     $scope.data.show = true;
     $timeout(function(){ $scope.data.show = false; }, 1500);
   };
-  $scope.data= {show:false};
+  $scope.data= {show:false, help:false};
   $scope.count = 0;
   $scope.articulos = new Array(5);
   $scope.showDetalle = new Array(5);
@@ -34,6 +34,30 @@ $scope.verReglamento = function(){ $state.go('detalleReglamento'); };
 $scope.reglamentoxTemas = function() { console.log('go to reglamento por temas'); };
 $scope.forosdeReglamento = function(){ console.log('go to foros de Reglamento'); };
 $scope.tipsdeReglamento = function(){ console.log('go to tips de reglamento'); };
+
+
+$ionicPopover.fromTemplateUrl('templates/reglamento/help.html', {
+  scope: $scope
+}).then(function(popover) {
+  $scope.popover = popover;
+});
+
+$scope.help = function(tipo){
+  /*Tipos:
+  * 0: Cómo actuar
+    1: Reglamento
+    2: Por temas
+    3: Foros de discusión
+    4: Tips
+  */
+  console.log($scope.popover);
+
+$scope.popover.show();
+console.log($scope.popover);
+  console.log(tipo);
+};
+
+
 
   console.log('Te encuentras en Reglamento;');
 }]);
